@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './style.css';
 import { StateProvider } from './store/store';
 import { MuiThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import { BrowserRouter } from "react-router-dom";
 import theme from './theme';
 import App from './pages/App';
 
@@ -10,9 +11,11 @@ import App from './pages/App';
 ReactDOM.render(
   <React.StrictMode>
     <MuiThemeProvider theme={theme}>
-      <StateProvider>
-        <App />    
-      </StateProvider>
+      <BrowserRouter>
+        <StateProvider>
+          <App />    
+        </StateProvider>
+      </BrowserRouter>
     </MuiThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
