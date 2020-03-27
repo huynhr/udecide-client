@@ -1,21 +1,12 @@
 import React, { Fragment } from 'react';
-import { makeStyles } from "@material-ui/core/styles";
+import styles from './styles';
 import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  title: {
-    flexGrow: 1
-  }
-}));
-
 function AppBarComponent() {
-  const classes = useStyles();
+  const classes = styles();
   return (
     <Fragment>
-      <AppBar position="static">
+      <AppBar position="static" color="primary">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             udecide
