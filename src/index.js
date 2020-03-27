@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 import { StateProvider } from './store/store';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { MuiThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
 import App from './pages/App';
 
