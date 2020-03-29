@@ -7,20 +7,16 @@ import { store } from '../store/store';
 import actionTypes from '../store/actionTypes';
 
 function App() {
-  const { state, dispatch } = useContext(store)
+  const { state } = useContext(store)
   // useEffect(() => {
   //   dispatch({
   //     type: actionTypes.ENV_UPDATE,
   //     payload: process.env.REACT_APP_ENV == 'production'
   //   });
   // });
-
-  console.log('state: ', state)
   return (
     <React.Fragment>
-      <Route path="/login">
-        <LoginPage />
-      </Route>
+      <Route path="/login" render={routeProps => <LoginPage {...routeProps} />} />
       <PrivateRoute exact path="/">
         <HomePage />
       </PrivateRoute>

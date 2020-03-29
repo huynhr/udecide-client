@@ -7,7 +7,7 @@ import styles from './styles';
 import { store } from '../../store/store';
 import actionTypes from '../../store/actionTypes';
 
-function AppBarComponent() {
+function AppBarComponent({ history }) {
   const classes = styles();
   const { state, dispatch } = useContext(store);
 
@@ -37,7 +37,8 @@ function AppBarComponent() {
         dispatch({ type: actionTypes.AUTHENTICATED_UPDATE, payload: false });
         onFailure();
       }
-    } 
+    }
+    history.push('/')
   }
 
   const onFailure = (err) => {

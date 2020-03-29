@@ -1,10 +1,10 @@
 import React, {Fragment} from 'react';
 import AppBarComponent from '../../components/AppBarComponent/AppBarComponent';
 
-function LoginPage() {
+function LoginPage(props) {
   return (
     <Fragment>
-      <AppBarComponent />
+      <AppBarComponent {...props}/>
     </Fragment>
   )
 }
