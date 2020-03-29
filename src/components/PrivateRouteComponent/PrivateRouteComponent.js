@@ -1,14 +1,12 @@
-import React, {useContext} from 'react';
-import { BrowserRouter, Redirect, Route } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Redirect, Route } from 'react-router-dom';
 import { store } from '../../store/store';
 
 function PrivateRouteComponent({ children, ...rest }) {
-  const {state} = useContext(store)
-  console.log('children: ', children);
-  console.log('rest: ', rest);
+  const { state } = useContext(store)
   return (
     <Route
-      {...rest}
+      { ...rest }
       render={() =>
         state.isAuthenticated ? (
           children
